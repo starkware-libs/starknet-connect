@@ -1,0 +1,39 @@
+{
+  "name": "@starkware-webapps/enums",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "license": "ISC",
+  "author": "Dan Ziv",
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "clean": "rm -rf ./dist",
+    "dev": "pnpm run clean && vite build --watch --mode development",
+    "docs:generate": "typedoc",
+    "docs:watch": "typedoc --watch",
+    "format": "sort-package-json && prettier --write \"**/*.+(ts|js|cjs|json|md|html|yml)\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "echo \"No tests found\"",
+    "ts-declarations": "tsc --emitDeclarationOnly"
+  },
+  "devDependencies": {
+    "@starkware-webapps/tsconfig": "workspace:*",
+    "eslint-config-ts": "workspace:*",
+    "typedoc": "^0.25.0",
+    "typedoc-plugin-markdown": "^3.13.4",
+    "typescript": "^5.3.3",
+    "vite": "^4.2.0"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "name": "@starkware-industries/starknet-connect",
+  "version": "1.0.1",
+  "private": false,
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./react": {
+      "require": "./dist/react.js",
+      "import": "./dist/react.mjs",
+      "types": "./dist/types/wrapper/react/index.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "react": [
+        "dist/types/wrapper/react/index.d.ts"
+      ]
+    }
+  },
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "clean": "rm -rf ./dist",
+    "dev": "pnpm run clean && vite build --watch --mode development",
+    "format": "sort-package-json && prettier --write \"**/*.+(ts|js|cjs|json|md|html|yml)\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "publish-package": "pnpm publish --access public --no-git-checks",
+    "test": "ts-mocha",
+    "ts-declarations": "tsc --emitDeclarationOnly"
+  },
+  "devDependencies": {
+    "@starkware-webapps/tsconfig": "workspace:*",
+    "@starkware-webapps/utils": "workspace:*",
+    "@starkware-webapps/web3-utils": "workspace:*",
+    "@testing-library/react": "^16.0.1",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "^20.8.10",
+    "@types/sinon": "^10.0.16",
+    "chai": "^4.3.10",
+    "eslint-config-ts": "workspace:*",
+    "global-jsdom": "25.0.0",
+    "jsdom": "^24.1.0",
+    "mocha": "^10.2.0",
+    "sinon": "^15.2.0",
+    "starknet-types": "0.7.2",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^5.3.3",
+    "vite": "^4.2.0",
+    "@types/react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "starknet": "6.11.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  }
+}

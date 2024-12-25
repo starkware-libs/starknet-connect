@@ -1,0 +1,11 @@
+{
+  "extends": "@starkware-webapps/tsconfig/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declarationDir": "dist/types",
+    "lib": ["DOM", "ES2022"]
+  },
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"],
+  "references": [{"path": "./tsconfig.node.json"}]
+}

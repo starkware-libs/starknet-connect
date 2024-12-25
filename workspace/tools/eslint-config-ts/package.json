@@ -1,0 +1,22 @@
+{
+  "name": "eslint-config-ts",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "format": "sort-package-json && prettier --write \"**.+(ts|js|json|md|html|yml)\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
+    "eslint-config-base": "workspace:*",
+    "eslint-plugin-no-only-tests": "^3.3.0",
+    "typescript-eslint": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
