@@ -3,6 +3,7 @@
   "globalEnv": [
     "npm_package_version",
     "npm_package_name",
+    "NPM_TOKEN",
     "PRERELEASE",
     "SENTRY_AUTH_TOKEN"
   ],
